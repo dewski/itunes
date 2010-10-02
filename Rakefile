@@ -6,7 +6,7 @@ begin
   Jeweler::Tasks.new do |s|
     root_files = FileList["README.md", "MIT-LICENSE"]
     s.name = 'itunes'
-    s.version = JSONBuilder::VERSION.dup
+    s.version = ITunes::VERSION.dup
     s.summary = 'iTunes'
     s.email = 'me@garrettbjerkhoel.com'
     s.homepage = 'http://github.com/dewski/itunes'
