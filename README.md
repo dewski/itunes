@@ -54,6 +54,15 @@ A Ruby wrapper around the iTunes API that lets you search for any sort of data t
     >> itunes = ITunes.new
     >> songs = itunes.music('green day she')
     => {"result_count" => 15, "results" => [...]}
+    >> songs['results'].each do |song|
+    >>   puts "#{song['trackName']} - #{song['artistName']} (#{song['collectionName']})"
+    >> end
+    => She - Green Day (Dookie)
+    => She - Green Day (Dookie)
+    => She - Green Day (Dookie)
+    => She - Green Day (Dookie)
+    => She - Green Day (Dookie)
+    => ...
     >> iron_man = ITunes.movie('iron man 2')
     => {"result_count" => 1, "results" => [...]}
 
