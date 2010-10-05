@@ -62,10 +62,14 @@ A Ruby wrapper around the iTunes API that lets you search for any sort of data t
     => She - Green Day (Dookie)
     => She - Green Day (Dookie)
     => She - Green Day (Dookie)
-    => ...
+
+Search directly from the class
+
     >> iron_man = ITunes.movie('iron man 2')
     => {"result_count" => 1, "results" => [...]}
-    => ...
+
+Limit the results:
+
     >> foo_fighters = ITunes.music('foo fighters everlong', :limit => 1)
     => {"result_count" => 1, "results" => [{ "trackName" => "Everlong", ... }]}
 
