@@ -65,10 +65,12 @@ A Ruby wrapper around the iTunes API that lets you search for any sort of data t
     => ...
     >> iron_man = ITunes.movie('iron man 2')
     => {"result_count" => 1, "results" => [...]}
+    => ...
+    >> foo_fighters = ITunes.music('foo fighters everlong', :limit => 1)
+    => {"result_count" => 1, "results" => [{ "trackName" => "Everlong", ... }]}
 
 ## Upcoming Features
 
-- Set a max number of results, currently returns all.
 - A better DSL.
 
 ## Copyright
