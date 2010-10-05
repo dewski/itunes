@@ -12,6 +12,7 @@ begin
     s.homepage = 'http://github.com/dewski/itunes'
     s.description = 'iTunes API'
     s.authors = ['Garrett Bjerkhoel']
+    s.rubyforge_project = 'itunes'
     s.files =  root_files + FileList['{lib}/**/*']
     s.extra_rdoc_files = root_files
     s.add_dependency('httparty')
