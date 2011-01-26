@@ -1,58 +1,19 @@
-require 'rubygems'
-require File.join(File.dirname(__FILE__), 'lib', 'itunes', 'version')
+require 'bundler'
+Bundler::GemHelper.install_tasks
 
-begin
-  require 'jeweler'
-  Jeweler::Tasks.new do |s|
-    root_files = FileList["README.md", "MIT-LICENSE"]
-    s.name = 'itunes'
-    s.version = ITunes::VERSION.dup
-    s.summary = 'iTunes'
-    s.email = 'me@garrettbjerkhoel.com'
-    s.homepage = 'http://github.com/dewski/itunes'
-    s.description = 'iTunes API'
-    s.authors = ['Garrett Bjerkhoel']
-    s.rubyforge_project = 'itunes'
-    s.files =  root_files + FileList['{lib}/**/*']
-    s.extra_rdoc_files = root_files
-    s.add_dependency('httparty')
-  end
+require 'rspec/core/rake_task'
+RSpec::Core::RakeTask.new(:spec)
 
-  Jeweler::GemcutterTasks.new
-rescue LoadError
-  puts "Jeweler, or one of its dependencies, is not available. Install it with: gem install jeweler"
-end
+task :default => :spec
 
-def gemspec
-  @gemspec ||= begin
-    gemspec_file = File.expand_path('../itunes.gemspec', __FILE__)
-    gemspec = eval(File.read(gemspec_file), binding, gemspec_file)
-  end
-end
-
-desc 'Removes trailing whitespace'
-task :whitespace do
-  sh %{find . -name '*.rb' -exec sed -i '' 's/ *$//g' {} \\;}
-end
-
-namespace :release do
-  task :tag do
-    release_tag = "v#{gemspec.version}"
-    sh "git tag -a #{release_tag} -m 'Tagging #{release_tag}'"
-    sh "git push origin #{release_tag}"
-  end
-
-  task :gem => :build do
-    sh "gem push pkg/#{gemspec.file_name}"
-  end
-end
-
-desc "Release the current branch to GitHub and Gemcutter"
-task :release => %w(release:tag release:gem)
-
-namespace :gemspec do
-  desc 'Validate the gemspec'
-  task :validate do
-    gemspec.validate
+namespace :doc do
+  require 'yard'
+  YARD::Rake::YardocTask.new do |task|
+    task.files   = ['lib/**/*.rb']
+    task.options = [
+      '--protected',
+      '--output-dir', 'doc/yard',
+      '--markup', 'markdown',
+    ]
   end
 end
