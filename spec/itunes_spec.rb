@@ -24,6 +24,12 @@ describe ITunes do
       @client.limit = 5
       @client.limit.should == 5
     end
+
+    it "should ignore the limit when set to 0" do
+      @client.limit = 0
+      response = @client.all('Michael Jackson')
+      response['resultCount'].should > 0
+    end
   end
 
   describe ".all" do
