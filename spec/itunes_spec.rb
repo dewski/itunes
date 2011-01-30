@@ -28,7 +28,7 @@ describe ITunes do
     it "should ignore the limit when set to 0" do
       @client.limit = 0
       response = @client.all('Michael Jackson')
-      response['resultCount'].should > 0
+      response.result_count.should > 0
     end
   end
 
@@ -56,7 +56,7 @@ describe ITunes do
 
     it "should accept a limit option" do
       response = ITunes.all('Michael Jackson', :limit => 2)
-      response['resultCount'].should == 2
+      response.result_count.should == 2
     end
 
   end
@@ -64,8 +64,8 @@ describe ITunes do
   describe ".music" do
     it "should return music results" do
       response = ITunes.music('Jose James')
-      response['results'].each do |result|
-        result['kind'].should == 'song'
+      response.results.each do |result|
+        result.kind.should == 'song'
       end
     end
   end
@@ -73,8 +73,8 @@ describe ITunes do
   describe ".podcast" do
     it "should return podcast results" do
       response = ITunes.podcast('Beyondjazz')
-      response['results'].each do |result|
-        result['kind'].should == 'podcast'
+      response.results.each do |result|
+        result.kind.should == 'podcast'
       end
     end
   end
@@ -82,8 +82,8 @@ describe ITunes do
   describe ".movie" do
     it "should return movie results" do
       response = ITunes.movie('Blade Runner')
-      response['results'].each do |result|
-        result['kind'].should == 'feature-movie'
+      response.results.each do |result|
+        result.kind.should == 'feature-movie'
       end
     end
   end
@@ -91,8 +91,8 @@ describe ITunes do
   describe ".music_video" do
     it "should return music video results" do
       response = ITunes.music_video('Sabotage')
-      response['results'].each do |result|
-        result['kind'].should == 'music-video'
+      response.results.each do |result|
+        result.kind.should == 'music-video'
       end
     end
   end
@@ -100,8 +100,8 @@ describe ITunes do
   describe ".audiobook" do
     it "should return audiobook results" do
       response = ITunes.audiobook('Ernest Hemingway')
-      response['results'].each do |result|
-        result['wrapperType'].should == 'audiobook'
+      response.results.each do |result|
+        result.wrapper_type.should == 'audiobook'
       end
     end
   end
@@ -109,8 +109,8 @@ describe ITunes do
   describe ".short_film" do
     it "should return short film results" do
       response = ITunes.short_film('Pixar')
-      response['results'].each do |result|
-        result['kind'].should == 'feature-movie'
+      response.results.each do |result|
+        result.kind.should == 'feature-movie'
       end
     end
   end
@@ -118,8 +118,8 @@ describe ITunes do
   describe ".tv_show" do
     it "should return tv show results" do
       response = ITunes.tv_show('Lost')
-      response['results'].each do |result|
-        result['kind'].should == 'tv-episode'
+      response.results.each do |result|
+        result.kind.should == 'tv-episode'
       end
     end
   end
