@@ -14,7 +14,7 @@ class ITunes
 
       @limit = args[1].delete(:limit) unless args[1].nil? # will return nil if there is no limit
 
-      request(args.first, camelcase)
+      search(args.first, camelcase)
     else
       super(name, *args)
     end
@@ -59,18 +59,22 @@ class ITunes
     self.new.all(terms, opts)
   end
 
+
   private
-    def request(term, media='all')
+    def search(term, media='all')
       raise ArgumentError, 'you need to search for something, provide a term.' if term.nil?
 
-      #
-      query = { :term => term, :media => media }
-      query.merge!({ :limit => @limit }) unless @limit.nil? or @limit == 0
+      params = { :term => term, :media => media }
+      params.merge!({ :limit => @limit }) unless @limit.nil? or @limit == 0
 
-      url = '/WebObjects/MZStoreServices.woa/wa/wsSearch'
+      request('Search', params)
+    end
+
+    def request(request_type, params)
+      url = '/WebObjects/MZStoreServices.woa/wa/ws' + request_type
 
       response = connection.get do |req|
-        req.url url, query
+        req.url url, params
       end
       response.body
     end
