@@ -32,6 +32,21 @@ describe ITunes do
     end
   end
 
+  describe "#adapter" do
+    before(:each) do
+      @client = ITunes.new
+    end
+
+    it "should instantiate with the default adapter" do
+      @client.adapter.should == Faraday.default_adapter
+    end
+
+    it "should allow an adapter to be set" do
+      @client.adapter = :typhoeus
+      @client.adapter.should == :typhoeus
+    end
+  end
+
   describe ".all" do
     it "should raise an ArgumentError when passed a nil search term" do
       lambda {

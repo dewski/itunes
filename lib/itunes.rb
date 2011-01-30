@@ -1,10 +1,9 @@
 require 'faraday_middleware'
-require 'typhoeus'
 require 'faraday/rashify'
 
 class ITunes
 
-  attr_accessor :limit
+  attr_accessor :limit, :adapter
 
   def method_missing(name, *args)
     methods = %q{movie podcast music music_video audiobook short_film tv_show all}
@@ -23,6 +22,7 @@ class ITunes
 
   def initialize(limit=nil)
     @limit = limit
+    @adapter = Faraday.default_adapter
     @base_uri = 'http://ax.phobos.apple.com.edgesuite.net'
   end
 
@@ -77,7 +77,7 @@ class ITunes
 
     def connection
       @conn ||= Faraday::Connection.new(:url => @base_uri) do |builder|
-        builder.adapter :typhoeus
+        builder.adapter(@adapter)
         builder.use Faraday::Response::ParseJson
         builder.use Faraday::Response::Rashify
       end
