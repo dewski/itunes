@@ -3,6 +3,8 @@ require 'faraday/rashify'
 
 class ITunes
 
+  ID_TYPES =  { :amg_artist => 'amgArtistId', :id => 'id', :amg_album => 'amgAlbumId', :upc => 'upc' }
+
   attr_accessor :limit, :adapter
 
   def method_missing(name, *args)
@@ -59,9 +61,15 @@ class ITunes
     self.new.all(terms, opts)
   end
 
-  def lookup(id)
-    params = { :id => id}
-    request('Lookup', params)
+  def lookup(id, options={})
+    id = id.split(',') if id.kind_of?(String)
+    id_type = options.delete(:id_type) || :id
+    options.merge!({ ID_TYPES[id_type.to_sym] => id.join(',') })
+    request('Lookup', options)
+  end
+
+  def self.lookup(id, options={})
+    self.new.lookup(id, options)
   end
 
 

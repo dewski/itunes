@@ -18,7 +18,35 @@ describe ITunes do
 
     it "should return results for valid ids" do
       item = @client.lookup('396405320')
-      item.should be
+      item.results.first.collection_name.should == 'Hold it Down - Single'
+      item.results.first.primary_genre_name == 'Dance'
+    end
+
+    describe "when using amg ids" do
+      describe "artist ids" do
+
+        it "should return a valid item when passed a single id" do
+          items = @client.lookup('468749', :id_type => :amg_artist)
+          items.result_count.should == 2
+        end
+
+        it "should return a results when passed a comma separated string of ids" do
+          items = @client.lookup('468749,5723', :id_type => :amg_artist)
+          items.result_count.should == 3
+        end
+
+        it "should return results when passed an array of ids" do
+          items = @client.lookup(['468749','5723'], :id_type => :amg_artist)
+          items.result_count.should == 3
+        end
+      end
+
+
+      describe "album ids" do
+      end
+    end
+
+    describe "when using a upc id" do
     end
   end
 
