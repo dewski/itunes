@@ -11,6 +11,17 @@ describe ITunes do
     end
   end
 
+  describe ".lookup" do
+    before(:each) do
+      @client = ITunes.new
+    end
+
+    it "should return results for valid ids" do
+      item = @client.lookup('396405320')
+      item.should be
+    end
+  end
+
   describe ".limit" do
     before(:each) do
       @client = ITunes.new

@@ -59,6 +59,11 @@ class ITunes
     self.new.all(terms, opts)
   end
 
+  def lookup(id)
+    params = { :id => id}
+    request('Lookup', params)
+  end
+
 
   private
     def search(term, media='all')
