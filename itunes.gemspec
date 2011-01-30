@@ -32,7 +32,6 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency('rash', '~> 0.2.0')
   s.add_runtime_dependency('faraday', '~> 0.5.4')
   s.add_runtime_dependency('faraday_middleware', '~> 0.3.1')
-  s.add_runtime_dependency('typhoeus', '~> 0.2.1')
   s.add_runtime_dependency('multi_json', '~> 0.0.5')
 
   s.files         = `git ls-files`.split("\n")
