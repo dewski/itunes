@@ -11,7 +11,7 @@ describe ITunes do
     end
   end
 
-  describe "#limit" do
+  describe ".limit" do
     before(:each) do
       @client = ITunes.new
     end
@@ -32,7 +32,7 @@ describe ITunes do
     end
   end
 
-  describe "#adapter" do
+  describe ".adapter" do
     before(:each) do
       @client = ITunes.new
     end
