@@ -1,89 +1,43 @@
---- 
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
-    method: :get
-    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
-      code: 200
-      message: OK
-    headers: 
-      x-apple-orig-url-path: 
-      - /WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-      x-apple-application-site: 
-      - CUP
-      x-apple-max-age: 
-      - "3600"
-      x-apple-woa-inbound-url: 
-      - /WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-      content-type: 
-      - text/javascript; charset=utf-8
-      x-apple-application-instance: 
-      - "353"
-      x-webobjects-loadaverage: 
-      - "0"
-      x-ns-label: 
-      - mzstoreservice-lb
-      expires: 
-      - Mon, 31 Jan 2011 05:35:01 GMT
-      cache-control: 
-      - max-age=0, no-cache
-      pragma: 
-      - no-cache
-      date: 
-      - Mon, 31 Jan 2011 05:35:01 GMT
-      content-length: 
-      - "912"
-      vary: 
-      - X-Apple-Store-Front
-      x-apple-partner: 
-      - origin.0
-    body: "\n\n\n\
-      {\n \"resultCount\":1,\n \"results\": [\n\
-      {\"wrapperType\":\"collection\", \"collectionType\":\"Album\", \"artistId\":220276686, \"collectionId\":358735381, \"amgArtistId\":1045698, \"amgVideoArtistId\":null, \"artistName\":\"Scuba\", \"collectionName\":\"Triangulation\", \"collectionCensoredName\":\"Triangulation\", \"artistViewUrl\":\"http://itunes.apple.com/us/artist/scuba/id220276686?uo=4\", \"collectionViewUrl\":\"http://itunes.apple.com/us/album/triangulation/id358735381?uo=4\", \"artworkUrl60\":\"http://a1.phobos.apple.com/us/r1000/054/Music/65/35/f0/mzi.lpsdgrjd.60x60-50.jpg\", \"artworkUrl100\":\"http://a1.phobos.apple.com/us/r1000/054/Music/65/35/f0/mzi.lpsdgrjd.100x100-75.jpg\", \"collectionPrice\":9.99, \"collectionExplicitness\":\"notExplicit\", \"contentAdvisoryRating\":null, \"trackCount\":13, \"copyright\":\"2010 Hotflush Recordings\", \"country\":\"USA\", \"currency\":\"USD\", \"releaseDate\":\"2010-03-22T07:00:00Z\", \"primaryGenreName\":\"Electronic\"}]\n\
-      }\n\n\n"
-    http_version: "1.1"
-- !ruby/struct:VCR::HTTPInteraction 
-  request: !ruby/struct:VCR::Request 
+---
+- !ruby/struct:VCR::HTTPInteraction
+  request: !ruby/struct:VCR::Request
     method: :get
     uri: http://ax.itunes.apple.com:80/WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-    body: 
-    headers: 
-  response: !ruby/struct:VCR::Response 
-    status: !ruby/struct:VCR::ResponseStatus 
+    body:
+    headers:
+  response: !ruby/struct:VCR::Response
+    status: !ruby/struct:VCR::ResponseStatus
       code: 200
       message: OK
-    headers: 
-      x-apple-orig-url-path: 
+    headers:
+      x-apple-orig-url-path:
       - /WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-      x-apple-application-site: 
+      x-apple-application-site:
       - NWK
-      x-apple-max-age: 
+      x-apple-max-age:
       - "3600"
-      x-apple-woa-inbound-url: 
+      x-apple-woa-inbound-url:
       - /WebObjects/MZStoreServices.woa/wa/wsLookup?id=358735381
-      content-type: 
+      content-type:
       - text/javascript; charset=utf-8
-      x-apple-application-instance: 
+      x-apple-application-instance:
       - "12032"
-      x-webobjects-loadaverage: 
+      x-webobjects-loadaverage:
       - "0"
-      vary: 
+      vary:
       - X-Apple-Store-Front
       - X-Apple-Store-Front
-      expires: 
+      expires:
       - Mon, 31 Jan 2011 05:43:58 GMT
-      cache-control: 
+      cache-control:
       - max-age=0, no-cache
-      pragma: 
+      pragma:
       - no-cache
-      date: 
+      date:
       - Mon, 31 Jan 2011 05:43:58 GMT
-      content-length: 
+      content-length:
       - "912"
-      x-apple-partner: 
+      x-apple-partner:
       - origin.0
     body: "\n\n\n\
       {\n \"resultCount\":1,\n \"results\": [\n\
