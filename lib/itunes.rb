@@ -25,7 +25,7 @@ class ITunes
   def initialize(limit=nil)
     @limit = limit
     @adapter = Faraday.default_adapter
-    @base_uri = 'http://ax.itunes.apple.com'
+    @endpoint = 'http://ax.itunes.apple.com'
   end
 
   # So you don't have to create an instance if you don't need to
@@ -96,7 +96,7 @@ class ITunes
     end
 
     def connection
-      @conn ||= Faraday::Connection.new(:url => @base_uri) do |builder|
+      @conn ||= Faraday::Connection.new(:url => @endpoint) do |builder|
         builder.adapter(@adapter)
         builder.use Faraday::Response::ParseJson
         builder.use Faraday::Response::Rashify
