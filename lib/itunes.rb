@@ -25,7 +25,7 @@ class ITunes
   def initialize(limit=nil)
     @limit = limit
     @adapter = Faraday.default_adapter
-    @base_uri = 'http://ax.phobos.apple.com.edgesuite.net'
+    @base_uri = 'http://ax.itunes.apple.com'
   end
 
   # So you don't have to create an instance if you don't need to
