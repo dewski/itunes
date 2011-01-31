@@ -814,3 +814,230 @@
       {\"wrapperType\":\"artist\", \"artistType\":\"Artist\", \"artistName\":\"U2\", \"artistLinkUrl\":\"http://itunes.apple.com/us/artist/u2/id78500?uo=4\", \"artistId\":78500, \"amgArtistId\":5723, \"amgVideoArtistId\":null, \"primaryGenreName\":\"Rock\", \"primaryGenreId\":21}]\n\
       }\n\n\n"
     http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15198
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-apple-orig-url-path: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15198
+      x-apple-application-site: 
+      - CUP
+      x-apple-max-age: 
+      - "3600"
+      x-apple-woa-inbound-url: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15198
+      content-type: 
+      - text/javascript; charset=utf-8
+      x-apple-application-instance: 
+      - "246"
+      x-webobjects-loadaverage: 
+      - "0"
+      x-ns-label: 
+      - mzstoreservice-lb
+      expires: 
+      - Mon, 31 Jan 2011 04:15:19 GMT
+      cache-control: 
+      - max-age=0, no-cache
+      pragma: 
+      - no-cache
+      date: 
+      - Mon, 31 Jan 2011 04:15:19 GMT
+      content-length: 
+      - "42"
+      vary: 
+      - X-Apple-Store-Front
+      x-apple-partner: 
+      - origin.0
+    body: "\n\n\n\
+      {\n \"resultCount\":0,\n \"results\": []\n\
+      }\n\n\n"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197,15198
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-apple-orig-url-path: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197%2C15198
+      x-apple-application-site: 
+      - CUP
+      x-apple-max-age: 
+      - "3600"
+      x-apple-woa-inbound-url: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197%2C15198
+      content-type: 
+      - text/javascript; charset=utf-8
+      x-apple-application-instance: 
+      - "259"
+      x-webobjects-loadaverage: 
+      - "0"
+      x-ns-label: 
+      - mzstoreservice-lb
+      expires: 
+      - Mon, 31 Jan 2011 04:15:20 GMT
+      cache-control: 
+      - max-age=0, no-cache
+      pragma: 
+      - no-cache
+      date: 
+      - Mon, 31 Jan 2011 04:15:20 GMT
+      content-length: 
+      - "913"
+      vary: 
+      - X-Apple-Store-Front
+      x-apple-partner: 
+      - origin.0
+    body: "\n\n\n\
+      {\n \"resultCount\":1,\n \"results\": [\n\
+      {\"wrapperType\":\"collection\", \"collectionType\":\"Album\", \"artistId\":577675, \"collectionId\":265615609, \"amgArtistId\":5142, \"amgVideoArtistId\":null, \"artistName\":\"Wilson Pickett\", \"collectionName\":\"Hey Jude\", \"collectionCensoredName\":\"Hey Jude\", \"artistViewUrl\":\"http://itunes.apple.com/us/artist/wilson-pickett/id577675?uo=4\", \"collectionViewUrl\":\"http://itunes.apple.com/us/album/hey-jude/id265615609?uo=4\", \"artworkUrl60\":\"http://a1.phobos.apple.com/us/r1000/008/Music/79/b3/3f/mzi.asgqsmzl.60x60-50.jpg\", \"artworkUrl100\":\"http://a1.phobos.apple.com/us/r1000/008/Music/79/b3/3f/mzi.asgqsmzl.100x100-75.jpg\", \"collectionPrice\":7.99, \"collectionExplicitness\":\"notExplicit\", \"contentAdvisoryRating\":null, \"trackCount\":11, \"copyright\":\"1969 Atlantic Records Corporation\", \"country\":\"USA\", \"currency\":\"USD\", \"releaseDate\":\"2007-10-16T07:00:00Z\", \"primaryGenreName\":\"R&B/Soul\"}]\n\
+      }\n\n\n"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?upc=075678317729
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-apple-orig-url-path: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?upc=075678317729
+      x-apple-application-site: 
+      - CUP
+      x-apple-max-age: 
+      - "3600"
+      x-apple-woa-inbound-url: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?upc=075678317729
+      content-type: 
+      - text/javascript; charset=utf-8
+      x-apple-application-instance: 
+      - "456"
+      x-webobjects-loadaverage: 
+      - "0"
+      x-ns-label: 
+      - mzstoreservice-lb
+      expires: 
+      - Mon, 31 Jan 2011 04:15:21 GMT
+      cache-control: 
+      - max-age=0, no-cache
+      pragma: 
+      - no-cache
+      date: 
+      - Mon, 31 Jan 2011 04:15:21 GMT
+      content-length: 
+      - "42"
+      vary: 
+      - X-Apple-Store-Front
+      x-apple-partner: 
+      - origin.0
+    body: "\n\n\n\
+      {\n \"resultCount\":0,\n \"results\": []\n\
+      }\n\n\n"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?=1235
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-apple-orig-url-path: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?=1235
+      x-apple-application-site: 
+      - CUP
+      x-apple-max-age: 
+      - "3600"
+      x-apple-woa-inbound-url: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?=1235
+      content-type: 
+      - text/javascript; charset=utf-8
+      x-apple-application-instance: 
+      - "260"
+      x-webobjects-loadaverage: 
+      - "0"
+      x-ns-label: 
+      - mzstoreservice-lb
+      expires: 
+      - Mon, 31 Jan 2011 05:08:19 GMT
+      cache-control: 
+      - max-age=0, no-cache
+      pragma: 
+      - no-cache
+      date: 
+      - Mon, 31 Jan 2011 05:08:19 GMT
+      content-length: 
+      - "42"
+      vary: 
+      - X-Apple-Store-Front
+      x-apple-partner: 
+      - origin.0
+    body: "\n\n\n\
+      {\n \"resultCount\":0,\n \"results\": []\n\
+      }\n\n\n"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: http://ax.phobos.apple.com.edgesuite.net:80/WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      x-apple-orig-url-path: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197
+      x-apple-application-site: 
+      - CUP
+      x-apple-max-age: 
+      - "3600"
+      x-apple-woa-inbound-url: 
+      - /WebObjects/MZStoreServices.woa/wa/wsLookup?amgAlbumId=15197
+      content-type: 
+      - text/javascript; charset=utf-8
+      x-apple-application-instance: 
+      - "354"
+      x-webobjects-loadaverage: 
+      - "0"
+      x-ns-label: 
+      - mzstoreservice-lb
+      expires: 
+      - Mon, 31 Jan 2011 05:41:54 GMT
+      cache-control: 
+      - max-age=0, no-cache
+      pragma: 
+      - no-cache
+      date: 
+      - Mon, 31 Jan 2011 05:41:54 GMT
+      content-length: 
+      - "913"
+      vary: 
+      - X-Apple-Store-Front
+      x-apple-partner: 
+      - origin.0
+    body: "\n\n\n\
+      {\n \"resultCount\":1,\n \"results\": [\n\
+      {\"wrapperType\":\"collection\", \"collectionType\":\"Album\", \"artistId\":577675, \"collectionId\":265615609, \"amgArtistId\":5142, \"amgVideoArtistId\":null, \"artistName\":\"Wilson Pickett\", \"collectionName\":\"Hey Jude\", \"collectionCensoredName\":\"Hey Jude\", \"artistViewUrl\":\"http://itunes.apple.com/us/artist/wilson-pickett/id577675?uo=4\", \"collectionViewUrl\":\"http://itunes.apple.com/us/album/hey-jude/id265615609?uo=4\", \"artworkUrl60\":\"http://a1.phobos.apple.com/us/r1000/008/Music/79/b3/3f/mzi.asgqsmzl.60x60-50.jpg\", \"artworkUrl100\":\"http://a1.phobos.apple.com/us/r1000/008/Music/79/b3/3f/mzi.asgqsmzl.100x100-75.jpg\", \"collectionPrice\":7.99, \"collectionExplicitness\":\"notExplicit\", \"contentAdvisoryRating\":null, \"trackCount\":11, \"copyright\":\"1969 Atlantic Records Corporation\", \"country\":\"USA\", \"currency\":\"USD\", \"releaseDate\":\"2007-10-16T07:00:00Z\", \"primaryGenreName\":\"R&B/Soul\"}]\n\
+      }\n\n\n"
+    http_version: "1.1"

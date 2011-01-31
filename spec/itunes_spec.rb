@@ -24,7 +24,6 @@ describe ITunes do
 
     describe "when using amg ids" do
       describe "artist ids" do
-
         it "should return a valid item when passed a single id" do
           items = @client.lookup('468749', :id_type => :amg_artist)
           items.result_count.should == 2
@@ -43,10 +42,35 @@ describe ITunes do
 
 
       describe "album ids" do
+        it "should return a valid item when passed a single id" do
+          items = @client.lookup('15197', :id_type => :amg_album)
+          items.results.first.artist_name.should == 'Wilson Pickett'
+        end
+
+        it "should return a results when passed a comma separated string of ids" do
+          items = @client.lookup('15197,15198', :id_type => :amg_album)
+          items.results.first.artist_name.should == 'Wilson Pickett'
+        end
+
+        it "should return results when passed an array of ids" do
+          items = @client.lookup(['15197','15198'], :id_type => :amg_album)
+          items.results.first.artist_name.should == 'Wilson Pickett'
+        end
       end
     end
 
     describe "when using a upc id" do
+      it "should return a valid item when passed a single id" do
+        items = @client.lookup('075678317729', :id_type => :upc)
+      end
+    end
+
+    describe "when passing an id_type other than amg or upc" do
+      it "should raise an error" do
+        lambda {
+          @client.lookup('1235', :id_type => :lastfm)
+        }.should raise_error
+      end
     end
   end
 
