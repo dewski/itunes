@@ -1,6 +1,7 @@
 require 'simplecov'
 SimpleCov.start do
   add_group 'ITunes', 'lib/itunes'
+  add_group 'Faraday Middleware', 'lib/faraday'
   add_group 'Specs', 'spec'
 end
 
