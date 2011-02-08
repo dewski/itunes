@@ -7,6 +7,14 @@ describe ITunes do
 
   use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method]
 
+  context "when delegating to a client" do
+
+    it "should return the same results as a client" do
+      ITunes.music('Jose James').should == ITunes::Client.new.music('Jose James')
+    end
+
+  end
+
   describe ".limit" do
     it 'should return the default limit' do
       ITunes.limit.should == ITunes::Configuration::DEFAULT_LIMIT
@@ -33,4 +41,16 @@ describe ITunes do
     end
   end
 
+  describe ".configure" do
+
+    ITunes::Configuration::VALID_OPTIONS_KEYS.each do |key|
+
+      it "should set the #{key}" do
+        ITunes.configure do |config|
+          config.send("#{key}=", key)
+          ITunes.send(key).should == key
+        end
+      end
+    end
+  end
 end

@@ -1,18 +1,36 @@
 module ITunes
   module Search
 
-    def method_missing(name, *args)
-      methods = %q{movie podcast music music_video audiobook short_film tv_show all}
+    def music(term, options={})
+      search(term, 'music', options)
+    end
 
-      if methods.include?(name.to_s)
-        camelcase = name.to_s.gsub(/\/(.?)/) { "::#{$1.upcase}" }.gsub(/(?:^|_)(.)/) { $1.upcase }
-        camelcase[0] = camelcase[0].chr.downcase
+    def movie(term, options={})
+      search(term, 'movie', options)
+    end
 
-        options = args[1] || {}
-        search(args.first, camelcase, options)
-      else
-        super(name, *args)
-      end
+    def podcast(term, options={})
+      search(term, 'podcast', options)
+    end
+
+    def music_video(term, options={})
+      search(term, 'musicVideo', options)
+    end
+
+    def audiobook(term, options={})
+      search(term, 'audiobook', options)
+    end
+
+    def short_film(term, options={})
+      search(term, 'shortFilm', options)
+    end
+
+    def tv_show(term, options={})
+      search(term, 'tvShow', options)
+    end
+
+    def all(term, options={})
+      search(term, 'all', options)
     end
 
     private
