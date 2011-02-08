@@ -59,9 +59,9 @@ Using the iTunes gem
 
     >> itunes = ITunes::Client.new
     >> songs = itunes.music('green day she')
-    => songs{"result_count" => 15, "results" => [...]}
-    >> songs['results'].each do |song|
-    >>   puts "#{song['trackName']} - #{song['artistName']} (#{song['collectionName']})"
+    => <#Hashie::Rash result_count=15 results=[...]>
+    >> songs.results.each do |song|
+    >>   puts "#{song.track_name} - #{song.artist_name} (#{song.collection_name})"
     >> end
     => She - Green Day (Dookie)
     => She - Green Day (Dookie)
@@ -72,13 +72,16 @@ Using the iTunes gem
 Search directly from the class
 
     >> iron_man = ITunes.movie('iron man 2')
-    => {"result_count" => 1, "results" => [...]}
+    => <#Hashie::Rash result_count=1 results=[...]>
 
 Limit the results:
 
     >> foo_fighters = ITunes.music('foo fighters everlong', :limit => 1)
-    => {"result_count" => 1, "results" => [{ "trackName" => "Everlong", ... }]}
+    => <#Hashie::Rash result_count=1 results=[<#Hashie::Rash ...>]>
 
+What is Hashie::Rash?
+
+If you are familiar with Hashie, Rash is very similar to a Mash.  The primary difference is that Rash gives us ruby-friendly keys so instead of artistId, Rash converts that to artist_id.
 
 Copyright
 ---------
