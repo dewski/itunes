@@ -6,11 +6,7 @@ module ITunes
   module Configuration
 
     # An array of valid keys in the options hash when configuring
-    VALID_OPTIONS_KEYS = [
-      :adapter,
-      :endpoint,
-      :limit,
-      :user_agent].freeze
+    VALID_OPTIONS_KEYS = [:adapter, :endpoint, :limit, :user_agent].freeze
 
     # The adapter that will be used to connect if none is set
     #
