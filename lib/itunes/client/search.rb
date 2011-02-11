@@ -45,6 +45,10 @@ module ITunes
           params.merge!({ :limit => limit })
         end
         params.delete(:limit) if params[:limit] && params[:limit] == 0
+        params.merge!(options)
+
+        # clear empty key/value pairs
+        params.reject! { |key, value| value.nil? }
 
         request('Search', params)
       end
