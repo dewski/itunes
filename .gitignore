@@ -1,3 +1,5 @@
 pkg/*
 Gemfile.lock
 coverage/*
+doc/*
+.yardoc
