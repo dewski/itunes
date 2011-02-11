@@ -18,13 +18,14 @@ module ITunes
     DEFAULT_ADAPTER = Faraday.default_adapter
 
     # The endpoint that will be used to connect if none is set
-    #
     DEFAULT_ENDPOINT = 'http://ax.itunes.apple.com'.freeze
 
     # The user agent that will be sent to the API endpoint if none is set
     DEFAULT_USER_AGENT = "ITunes Ruby Gem #{ITunes::VERSION}".freeze
 
     # The default number of results to return from the API
+    #
+    # @note The default limit from iTunes is 100.
     DEFAULT_LIMIT = nil
 
     # @private
