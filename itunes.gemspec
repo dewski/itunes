@@ -6,7 +6,7 @@ Gem::Specification.new do |s|
   s.name = "itunes"
   s.version = ITunes::VERSION
   s.platform    = Gem::Platform::RUBY
-  s.authors = ["Garrett Bjerkhoel"]
+  s.authors = ["Garrett Bjerkhoel", "Steve Agalloco"]
   s.email = %q{me@garrettbjerkhoel.com}
   s.homepage = %q{http://github.com/dewski/itunes}
   s.summary = %q{iTunes API}
