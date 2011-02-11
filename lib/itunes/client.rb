@@ -6,7 +6,7 @@ module ITunes
     # @private
     attr_accessor *Configuration::VALID_OPTIONS_KEYS
 
-    # Creates a new API
+    # Creates a new Client
     def initialize(options={})
       options = ITunes.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|

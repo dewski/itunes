@@ -44,7 +44,6 @@ describe ITunes do
   describe ".configure" do
 
     ITunes::Configuration::VALID_OPTIONS_KEYS.each do |key|
-
       it "should set the #{key}" do
         ITunes.configure do |config|
           config.send("#{key}=", key)

@@ -1,6 +1,7 @@
 module ITunes
   module Request
 
+    # Perform an HTTP GET request
     def request(request_type, params)
       url = '/WebObjects/MZStoreServices.woa/wa/ws' + request_type
 

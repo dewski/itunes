@@ -79,6 +79,12 @@ describe ITunes::Client do
         }.should raise_error
       end
 
+      it "should raise an ArgumentError when passed an empty string as a search term" do
+        lambda {
+          @client.all('')
+        }.should raise_error
+      end
+
       it "should accept a limit option" do
         response = @client.all('Michael Jackson', :limit => 2)
         response.result_count.should == 2
