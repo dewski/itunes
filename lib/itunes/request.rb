@@ -19,10 +19,10 @@ module ITunes
           :url => api_endpoint,
         }
 
-        Faraday::Connection.new(options) do |builder|
-          builder.adapter(adapter)
-          builder.use Faraday::Response::ParseJson
+        Faraday.new(options) do |builder|
           builder.use Faraday::Response::Rashify
+          builder.use Faraday::Response::ParseJson
+          builder.adapter(adapter)
         end
       end
 

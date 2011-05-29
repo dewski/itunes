@@ -1,5 +1,4 @@
 require 'faraday_middleware'
-require 'faraday/rashify'
 require 'itunes/configuration'
 require 'itunes/client'
 
