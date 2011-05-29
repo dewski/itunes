@@ -30,7 +30,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency('json', '~> 1.5.1')
 
   s.add_runtime_dependency('hashie', '~> 1.0.0')
-  s.add_runtime_dependency('rash', '~> 0.2.0')
+  s.add_runtime_dependency('rash', '~> 0.3.0')
   s.add_runtime_dependency('faraday_middleware', '~> 0.6.3')
   s.add_runtime_dependency('multi_json', '~> 0.0.5')
 
