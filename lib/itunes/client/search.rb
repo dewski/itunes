@@ -50,6 +50,20 @@ module ITunes
       search(term, 'tvShow', options)
     end
 
+    # Performs a software search
+    # @param [String] term The search term
+    # @option options [Symbol]
+    def software(term, options={})
+      search(term, 'software', options)
+    end
+
+    # Performs a ebook search
+    # @param [String] term The search term
+    # @option options [Symbol]
+    def ebook(term, options={})
+      search(term, 'ebook', options)
+    end
+
     # Performs a search on all itunes content
     # @param [String] term The search term
     # @option options [Symbol]
@@ -59,23 +73,23 @@ module ITunes
 
     private
 
-      def search(term, media='all', options={})
-        raise ArgumentError, 'you need to search for something, provide a term.' if term.nil? || term.length == 0
+    def search(term, media='all', options={})
+      raise ArgumentError, 'you need to search for something, provide a term.' if term.nil? || term.length == 0
 
-        params = { :term => term, :media => media }
-        if options.has_key?(:limit)
-          params.merge!(:limit => options.delete(:limit))
-        elsif limit
-          params.merge!({ :limit => limit })
-        end
-        params.delete(:limit) if params[:limit] && params[:limit] == 0
-        params.merge!(options)
-
-        # clear empty key/value pairs
-        params.reject! { |key, value| value.nil? }
-
-        request('Search', params)
+      params = { :term => term, :media => media }
+      if options.has_key?(:limit)
+        params.merge!(:limit => options.delete(:limit))
+      elsif limit
+        params.merge!({ :limit => limit })
       end
+      params.delete(:limit) if params[:limit] && params[:limit] == 0
+      params.merge!(options)
+
+      # clear empty key/value pairs
+      params.reject! { |key, value| value.nil? }
+
+      request('Search', params)
+    end
 
   end
 end
