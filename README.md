@@ -43,14 +43,16 @@ Example Response
 Available Methods
 -----------------
 
-   - movie
-   - podcast
-   - music
-   - music_video
-   - audiobook
-   - short_film
-   - tv_show
-   - all
+* movie
+* podcast
+* music
+* music_video
+* audiobook
+* short_film
+* tv_show
+* ebook
+* software
+* all
 
 Using the iTunes gem
 --------------------
@@ -86,4 +88,4 @@ If you are familiar with Hashie, Rash is very similar to a Mash.  The primary di
 Copyright
 ---------
 
-Copyright © 2010 Garrett Bjerkhoel. See [MIT-LICENSE](http://github.com/dewski/itunes/blob/master/MIT-LICENSE) for details.
+Copyright © 2011 Garrett Bjerkhoel, Steve Agalloco. See [MIT-LICENSE](http://github.com/dewski/itunes/blob/master/MIT-LICENSE) for details.
