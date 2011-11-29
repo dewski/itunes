@@ -1,4 +1,4 @@
-iTunes
+iTunes [![Build Status](https://secure.travis-ci.org/dewski/itunes.png)](http://travis-ci.org/dewski/itunes)
 ======
 
 A Ruby wrapper around the iTunes API that lets you search for any sort of data that is available on the iTunes store.
