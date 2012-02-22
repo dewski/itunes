@@ -46,10 +46,10 @@ module ITunes
 
     # Reset all configuration options to defaults
     def reset
-      self.adapter            = DEFAULT_ADAPTER
-      self.endpoint           = DEFAULT_ENDPOINT
-      self.limit              = DEFAULT_LIMIT
-      self.user_agent         = DEFAULT_USER_AGENT
+      self.adapter    = DEFAULT_ADAPTER
+      self.endpoint   = DEFAULT_ENDPOINT
+      self.limit      = DEFAULT_LIMIT
+      self.user_agent = DEFAULT_USER_AGENT
       self
     end
   end

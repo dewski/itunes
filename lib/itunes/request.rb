@@ -15,7 +15,7 @@ module ITunes
 
       def connection
         options = {
-          :headers => {'Accept' => "application/json", 'User-Agent' => user_agent},
+          :headers => {'Accept' => 'application/json', 'User-Agent' => user_agent},
           :url => api_endpoint,
         }
 
