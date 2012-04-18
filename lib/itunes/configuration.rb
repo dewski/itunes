@@ -1,7 +1,7 @@
 require 'faraday'
 require File.expand_path('../version', __FILE__)
 
-module ITunes
+module Tunes
   # Defines constants and methods related to configuration
   module Configuration
 

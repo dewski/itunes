@@ -1,6 +1,6 @@
 require File.expand_path('../request', __FILE__)
 
-module ITunes
+module Tunes
   class Client
 
     # @private
@@ -8,7 +8,7 @@ module ITunes
 
     # Creates a new Client
     def initialize(options={})
-      options = ITunes.options.merge(options)
+      options = Tunes.options.merge(options)
       Configuration::VALID_OPTIONS_KEYS.each do |key|
         send("#{key}=", options[key])
       end

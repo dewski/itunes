@@ -1,4 +1,4 @@
-module ITunes
+module Tunes
   module Search
 
     # Performs a music search

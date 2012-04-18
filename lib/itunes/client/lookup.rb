@@ -1,4 +1,4 @@
-module ITunes
+module Tunes
   module Lookup
 
     ID_TYPES =  { :amg_artist => 'amgArtistId', :id => 'id', :amg_album => 'amgAlbumId', :upc => 'upc' }

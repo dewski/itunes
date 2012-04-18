@@ -1,25 +1,25 @@
 require 'faraday_middleware'
-require 'itunes/configuration'
-require 'itunes/client'
+require 'tunes/configuration'
+require 'tunes/client'
 
-module ITunes
+module Tunes
   extend Configuration
 
-  # Alias for ITunes::Client.new
+  # Alias for Tunes::Client.new
   #
-  # @return [ITunes::Client]
+  # @return [Tunes::Client]
   def self.client(options={})
-    ITunes::Client.new(options)
+    Client.new options
   end
 
-  # Alias for ITunes::Client.new
+  # Alias for Tunes::Client.new
   #
-  # @return [ITunes::Client]
+  # @return [Tunes::Client]
   def self.new(options={})
-    ITunes::Client.new(options)
+    Client.new options
   end
 
-  # Delegate to ITunes::Client
+  # Delegate to Tunes::Client
   def self.method_missing(method, *args, &block)
     return super unless new.respond_to?(method)
     new.send(method, *args, &block)

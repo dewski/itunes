@@ -1,4 +1,4 @@
-module ITunes
+module Tunes
   module Request
     REQUEST_OPTIONS = {
       :timeout => 5,

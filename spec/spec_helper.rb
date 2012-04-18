@@ -1,11 +1,11 @@
 require 'simplecov'
 SimpleCov.start do
-  add_group 'ITunes', 'lib/itunes'
+  add_group 'Tunes', 'lib/tunes'
   add_group 'Faraday Middleware', 'lib/faraday'
   add_group 'Specs', 'spec'
 end
 
-require File.expand_path('../../lib/itunes', __FILE__)
+require File.expand_path('../../lib/tunes', __FILE__)
 
 require 'rspec'
 require 'vcr'

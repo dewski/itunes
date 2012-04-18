@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe ITunes::Client do
-  before(:each) do
-    @client = ITunes::Client.new
+describe Tunes::Client do
+  before do
+    @client = Tunes::Client.new
   end
 
   use_vcr_cassette :record => :new_episodes, :match_requests_on => [:uri, :method]
