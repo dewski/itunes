@@ -1,9 +1,5 @@
 module ITunes
   module Request
-    REQUEST_OPTIONS = {
-      :timeout => 5,
-      :open_timeout => 5
-    }
 
     # @private
     private
@@ -14,7 +10,7 @@ module ITunes
 
         response = connection.get do |req|
           req.url url, params
-          req.options = REQUEST_OPTIONS
+          req.options = request_options
         end
         response.body
       end

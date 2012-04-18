@@ -6,7 +6,7 @@ module ITunes
   module Configuration
 
     # An array of valid keys in the options hash when configuring
-    VALID_OPTIONS_KEYS = [:adapter, :endpoint, :limit, :user_agent].freeze
+    VALID_OPTIONS_KEYS = [:adapter, :endpoint, :limit, :user_agent, :request_options].freeze
 
     # The adapter that will be used to connect if none is set
     #
@@ -23,6 +23,12 @@ module ITunes
     #
     # @note The default limit from iTunes is 100.
     DEFAULT_LIMIT = nil
+
+    # The default request options for Faraday
+    DEFAULT_REQUEST_OPTIONS = {
+      :timeout => 5,
+      :open_timeout => 5
+    }
 
     # @private
     attr_accessor *VALID_OPTIONS_KEYS
@@ -46,10 +52,11 @@ module ITunes
 
     # Reset all configuration options to defaults
     def reset
-      self.adapter    = DEFAULT_ADAPTER
-      self.endpoint   = DEFAULT_ENDPOINT
-      self.limit      = DEFAULT_LIMIT
-      self.user_agent = DEFAULT_USER_AGENT
+      self.adapter          = DEFAULT_ADAPTER
+      self.endpoint         = DEFAULT_ENDPOINT
+      self.limit            = DEFAULT_LIMIT
+      self.user_agent       = DEFAULT_USER_AGENT
+      self.request_options  = DEFAULT_REQUEST_OPTIONS
       self
     end
   end
