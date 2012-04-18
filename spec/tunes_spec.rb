@@ -14,7 +14,7 @@ describe Tunes do
   end
 
   describe '.client' do
-    it 'should return and ITunes::Client' do
+    it 'should return and Tunes::Client' do
       Tunes.client.should be_a Tunes::Client
     end
   end
@@ -26,14 +26,14 @@ describe Tunes do
   end
 
   describe ".new" do
-    it "should return an ITunes::Client" do
-      Tunes.new.should be_a ITunes::Client
+    it "should return an Tunes::Client" do
+      Tunes.new.should be_a Tunes::Client
     end
   end
 
   describe ".limit" do
     it 'should return the default limit' do
-      Tunes.limit.should == ITunes::Configuration::DEFAULT_LIMIT
+      Tunes.limit.should == Tunes::Configuration::DEFAULT_LIMIT
     end
   end
 

@@ -17,7 +17,7 @@ module Tunes
     DEFAULT_ENDPOINT = 'http://ax.itunes.apple.com'.freeze
 
     # The user agent that will be sent to the API endpoint if none is set
-    DEFAULT_USER_AGENT = "ITunes Ruby Gem #{ITunes::VERSION}".freeze
+    DEFAULT_USER_AGENT = "ITunes Ruby Gem #{Tunes::VERSION}".freeze
 
     # The default number of results to return from the API
     #
