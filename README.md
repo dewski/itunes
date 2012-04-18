@@ -1,4 +1,4 @@
-iTunes [![Build Status](https://secure.travis-ci.org/dewski/itunes.png)](http://travis-ci.org/dewski/itunes)
+Tunes [![Build Status](https://secure.travis-ci.org/dewski/itunes.png)](http://travis-ci.org/dewski/itunes)
 ======
 
 A Ruby wrapper around the iTunes API that lets you search for any sort of data that is available on the iTunes store.
@@ -54,13 +54,13 @@ Available Methods
 * software
 * all
 
-Using the iTunes gem
+Using the Tunes gem
 --------------------
 
-    require 'itunes'
+    require 'tunes'
 
-    >> itunes = ITunes::Client.new
-    >> songs = itunes.music('green day she')
+    >> tunes = Tunes::Client.new
+    >> songs = tunes.music('green day she')
     => <#Hashie::Rash result_count=15 results=[...]>
     >> songs.results.each do |song|
     >>   puts "#{song.track_name} - #{song.artist_name} (#{song.collection_name})"
@@ -73,12 +73,12 @@ Using the iTunes gem
 
 Search directly from the class
 
-    >> iron_man = ITunes.movie('iron man 2')
+    >> iron_man = Tunes.movie('iron man 2')
     => <#Hashie::Rash result_count=1 results=[...]>
 
 Limit the results:
 
-    >> foo_fighters = ITunes.music('foo fighters everlong', :limit => 1)
+    >> foo_fighters = Tunes.music('foo fighters everlong', :limit => 1)
     => <#Hashie::Rash result_count=1 results=[<#Hashie::Rash ...>]>
 
 What is Hashie::Rash?
