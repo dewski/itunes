@@ -1,14 +1,14 @@
 # -*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'itunes/version'
+require 'tunes/version'
 
 Gem::Specification.new do |s|
-  s.name = 'itunes'
+  s.name = 'tunes'
   s.version = Tunes::VERSION
   s.platform = Gem::Platform::RUBY
   s.authors = ['Garrett Bjerkhoel', 'Steve Agalloco']
   s.email = %q{me@garrettbjerkhoel.com}
-  s.homepage = %q{http://github.com/dewski/itunes}
+  s.homepage = %q{http://github.com/dewski/tunes}
   s.summary = %q{iTunes API}
 
   s.rubyforge_project = 'itunes'
