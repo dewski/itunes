@@ -1,4 +1,5 @@
 require 'faraday_middleware'
+require 'nokogiri'
 require 'itunes/configuration'
 require 'itunes/client'
 
