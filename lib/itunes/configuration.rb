@@ -56,7 +56,7 @@ module ITunes
       self.endpoint         = DEFAULT_ENDPOINT
       self.limit            = DEFAULT_LIMIT
       self.user_agent       = DEFAULT_USER_AGENT
-      self.request_options  = DEFAULT_REQUEST_OPTIONS
+      self.request_options  = nil
       self
     end
   end
