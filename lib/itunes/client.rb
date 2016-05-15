@@ -21,6 +21,7 @@ module ITunes
     include Request
     include Search
     include Lookup
+    include AdditionalMetadata
 
   end
 end
